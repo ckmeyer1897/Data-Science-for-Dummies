@@ -4,13 +4,13 @@ job,categorical
 marital,categorical
 education,categorical
 default,categorical
-balance,numerical
+balance,categorical
 housing,categorical
 loan,categorical
 contact,categorical
 day,categorical
 month,categorical
-duration,numerical
+duration,categorical
 campaign,categorical
 pdays,categorical
 previous,categorical
