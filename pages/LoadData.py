@@ -44,9 +44,9 @@ def app():
             return pr
 
         #Generate a pandas profiling report
-        if st.button("Generate an analysis report"):
-            pr = get_summary_report(data)
-            st_profile_report(pr)
+       # if st.button("Generate an analysis report"):
+         #   pr = get_summary_report(data)
+          #  st_profile_report(pr)
         #    utils.getProfile(data)
             #Open HTML file
 
