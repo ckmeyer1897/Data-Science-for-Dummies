@@ -7,7 +7,7 @@ import pandas as pd
 
 # Custom imports 
 from multipage import MultiPage
-from pages import LoadData, DataUnderstanding, utils, data_viz
+from pages import LoadData, DataUnderstanding, utils, data_viz, dataprep
 
 # Create an instance of the app 
 app = MultiPage()
@@ -32,14 +32,11 @@ st.sidebar.title("1 - Data Understanding")#
 # with st.sidebar.beta_expander(app.add_page('Data Collection', LoadData.app)
 # Add all your application here
 app.add_page("Load Data", LoadData.app)
-# with st.sidebar.expander("Upload Data", expanded= True):
-#     uploaded_file = st.file_uploader("Choose a file", type = ['csv', 'xlsx'])
-#     data = pd.read_csv(uploaded_file)
-#     data.to_csv('data/main_data.csv', index=False)
-
-#         st.dataframe(data)
 app.add_page("Data Exploration", DataUnderstanding.app)
 app.add_page("Data Vizualization", data_viz.app)
+app.add_page("Data Preparation", dataprep.app)
+
+
 # st.sidebar.title("2 - Data Preparation")
 # st.sidebar.title("3 - Modeling")
 # st.sidebar.title("4 - Evaluation")
