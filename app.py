@@ -7,7 +7,7 @@ import pandas as pd
 
 # Custom imports 
 from multipage import MultiPage
-from pages import LoadData, DataUnderstanding, utils, data_viz, dataprep, modeling
+from pages import LoadData, DataUnderstanding, data_viz, dataprep, modeling
 
 # Create an instance of the app 
 app = MultiPage()
