@@ -203,6 +203,10 @@ def load_data(nrows):
     data  = pd.read_csv('bank-full.csv', delimiter = ';', nrows=nrows)
     return data
 
+def load_df(df_name):
+    data  = pd.read_csv('data/'+ df_name + '.csv')
+    return data
+
 if __name__ == '__main__':
     df = {"Name": ["salil", "saxena", "for", "int"]}
     df = pd.DataFrame(df)
