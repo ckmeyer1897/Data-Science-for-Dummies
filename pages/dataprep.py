@@ -144,8 +144,6 @@ def app():
             integrated_df = integrate_data(clean_df, ordinal_data, nom_data)
             st.write('Integrated Data', integrated_df)
             integrated_df.to_csv('data/integrated_df.csv', index= False)
-
-
     
 ## 3.5 Format Data
     def normalize_df(df):
@@ -154,14 +152,14 @@ def app():
         scaled_balanced_df = pd.DataFrame(scaled_balanced_df, index=df.index, columns=df.columns)
         return scaled_balanced_df
 
-
     col1, col2 = st.columns(2)
     integrated_df = pd.read_csv('data/integrated_df.csv')
 
     with col1:
         st.subheader('5 - Normalize Data')
-        scaled_balanced_df = normalize_df(integrated_df)
-        scaled_balanced_df.to_csv('data/df.csv', index=False)
+        if st.button('Min Max Scaler'):
+            scaled_balanced_df = normalize_df(integrated_df)
+            scaled_balanced_df.to_csv('data/df.csv', index=False)
+            st.write('Processed Data: ', scaled_balanced_df)
 
-    df = pd.read_csv('data/df.csv')
-    st.write('Processed Data: ', df)
+    
