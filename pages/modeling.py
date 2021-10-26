@@ -42,11 +42,11 @@ def app():
 
     col1, col2 = st.columns(2)
     with col1:
-        st.markdown('## Training Data')
+        st.markdown('### Training Data')
         st.write('Features Dimensions: ', x_train.shape)
         st.write('Target Dimensions: ', y_train.shape)
     with col2:
-        st.markdown('## Testing Data')
+        st.markdown('### Testing Data')
         st.write('Feature Dimensions: ', x_test.shape)
         st.write('Target Dimensions: ', y_test.shape)      
 
@@ -124,7 +124,7 @@ def app():
 
     st.empty()
     if st.button('Logistic Regression'):
-        st.header('Logistic Regression')    
+        st.markdown('### Logistic Regression')    
         logit = LogisticRegression(solver='liblinear', random_state=0)
         #Training 
         st.text('Training model. . .')
@@ -156,3 +156,4 @@ def app():
         with col3:
             st.write('Metrics', lgrmetrics)
         
+    
