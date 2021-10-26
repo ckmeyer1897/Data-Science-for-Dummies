@@ -1,6 +1,7 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
+import pages
 from pages import utils
 import pandas_profiling
 from pandas_profiling import ProfileReport
@@ -30,7 +31,7 @@ def app():
     This section also allows changes in the numerical and categorical columns. '''
     if st.button("Load Data"):
      #   st.progress(0)
-        data  = pd.read_csv('bank-full.csv', delimiter = ';', nrows=1000)
+        data  = pd.read_csv('bank-full.csv', delimiter = ';', nrows=50000)
       #  st.progress(100)
 
         # Raw data 
