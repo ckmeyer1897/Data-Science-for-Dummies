@@ -12,7 +12,6 @@ import random
 import sklearn
 from sklearn import preprocessing
 from sklearn.preprocessing import MinMaxScaler
-
 from pages.utils import summary_target
 
 
@@ -85,10 +84,8 @@ def app():
                 st.write(no_out_corr.shape)
                 st.write('Correlated Variables', correlated)
                 no_out_corr.to_csv('data/clean_df.csv', index=False)
-    
-        
-            
-
+                
+                             
 ## 3.3 Feature Engineering
  ### Functions
     def split_cats(cat_data):
