@@ -7,6 +7,9 @@ import seaborn as sns
 import warnings
 import os
 from matplotlib.cbook import boxplot_stats  
+from matplotlib.figure import Figure
+import streamlit as st
+
 
 
 # from pandas_profiling import ProfileReport
@@ -86,15 +89,11 @@ def newDF(df, columns2Drop):
     return newDF
 
 def summary_target(data, target):
-    summary = target.describe()
-    true_count = target.value_counts()
-    true_rate = true_count[1] / true_count[0]
-    print('Summary Info:')
-    print(summary)
-    print('')
-    print("Percent Positive: " +  str(true_rate *100))
-    
-    sns.countplot(target)
+
+    fig = Figure()
+    ax = fig.subplots()
+    sns.countplot(data = data, y = target)
+    st.pyplot()
     plt.show();
     
 #histogram of distribution 
