@@ -215,6 +215,6 @@ if __name__ == '__main__':
     print(df.head())
     pp = mapunique(df, "Name")
     print("New df: ")
-    print(pp.head())
+   # print(pp.head())
 
 
